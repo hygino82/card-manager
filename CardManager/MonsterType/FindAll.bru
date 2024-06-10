@@ -1,0 +1,17 @@
+meta {
+  name: FindAll
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/monster_type
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "typeName": "Vitimista"
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Insert
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/monster_type
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "typeName": "Vitimista"
+  }
+}

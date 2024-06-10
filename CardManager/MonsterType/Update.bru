@@ -1,0 +1,17 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/monster_type/3
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "typeName": "Vitimista"
+  }
+}

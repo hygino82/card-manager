@@ -1,0 +1,17 @@
+meta {
+  name: Delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8080/monster_type/7
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "typeName": "Vitimista"
+  }
+}
