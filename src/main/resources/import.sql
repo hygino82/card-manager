@@ -18,3 +18,7 @@ INSERT INTO monster_type(type_name) VALUES ('Thunder');
 INSERT INTO monster_type(type_name) VALUES ('Warrior');
 INSERT INTO monster_type(type_name) VALUES ('Winged Beast');
 INSERT INTO monster_type(type_name) VALUES ('Zombie');
+
+INSERT INTO atribute(name) VALUES ('Dark');
+INSERT INTO atribute(name) VALUES ('Light');
+INSERT INTO atribute(name) VALUES ('Fire');

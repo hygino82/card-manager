@@ -13,41 +13,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.dev.hygino.dto.InsertMonsterTypeDTO;
-import br.dev.hygino.dto.MonsterTypeDTO;
-import br.dev.hygino.services.MonsterTypeService;
+import br.dev.hygino.dto.AtributeDTO;
+import br.dev.hygino.dto.InsertAtributeDTO;
+import br.dev.hygino.services.AtributeService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/type")
+@RequestMapping("/atribute")
 @RequiredArgsConstructor
-public class MonsterTypeController implements IController<InsertMonsterTypeDTO, MonsterTypeDTO> {
-
-    private final MonsterTypeService service;
+public class AtributeController implements IController<InsertAtributeDTO, AtributeDTO> {
+    
+    private final AtributeService service;
 
     @Override
     @PostMapping
-    public ResponseEntity<MonsterTypeDTO> insert(@Valid @RequestBody InsertMonsterTypeDTO dto) {
+    public ResponseEntity<AtributeDTO> insert(@Valid @RequestBody InsertAtributeDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.insert(dto));
     }
 
     @Override
     @GetMapping
-    public ResponseEntity<Page<MonsterTypeDTO>> findAll(Pageable pageable) {
+    public ResponseEntity<Page<AtributeDTO>> findAll(Pageable pageable) {
         return ResponseEntity.status(HttpStatus.OK).body(service.findAll(pageable));
     }
 
     @Override
     @GetMapping("/{id}")
-    public ResponseEntity<MonsterTypeDTO> findById(@PathVariable Integer id) {
+    public ResponseEntity<AtributeDTO> findById(@PathVariable Integer id) {
         return ResponseEntity.status(HttpStatus.OK).body(service.findById(id));
     }
 
     @Override
     @PutMapping("/{id}")
-    public ResponseEntity<MonsterTypeDTO> update(@PathVariable Integer id,
-            @Valid @RequestBody InsertMonsterTypeDTO dto) {
+    public ResponseEntity<AtributeDTO> update(@PathVariable Integer id,
+            @Valid @RequestBody InsertAtributeDTO dto) {
         return ResponseEntity.status(HttpStatus.OK).body(service.update(id, dto));
     }
 
