@@ -1,0 +1,17 @@
+meta {
+  name: Delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8080/color/1
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Light"
+  }
+}

@@ -22,3 +22,8 @@ INSERT INTO monster_type(type_name) VALUES ('Zombie');
 INSERT INTO atribute(name) VALUES ('Dark');
 INSERT INTO atribute(name) VALUES ('Light');
 INSERT INTO atribute(name) VALUES ('Fire');
+
+INSERT INTO color(name) VALUES ('Yellow');
+INSERT INTO color(name) VALUES ('Orange');
+INSERT INTO color(name) VALUES ('Gray');
+INSERT INTO color(name) VALUES ('Pink');
